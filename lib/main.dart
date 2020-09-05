@@ -1,3 +1,4 @@
+import 'package:bytebank_persistencia_Flutter/screens/dashboard.dart';
 import 'package:flutter/material.dart';
 
 void main() => runApp(BytebankApp());
@@ -6,16 +7,15 @@ class BytebankApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      home: Scaffold(
-        appBar: AppBar(
-          title: Text('Dashboard'),
-        ),/*
-        body: Column(
-          children: <Widget>[
-            Image.asset('images/bytebank_logo.png'),
-          ],
-        ),*/
+      theme: ThemeData(
+        primaryColor: Colors.green[900],
+        accentColor: Colors.blueAccent[700],
+        buttonTheme: ButtonThemeData(
+          buttonColor: Colors.blueAccent[700],
+          textTheme: ButtonTextTheme.primary,
+        ),
       ),
+      home: Dashboard(),
     );
   }
 }
