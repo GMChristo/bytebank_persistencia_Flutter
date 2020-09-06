@@ -1,7 +1,16 @@
 import 'package:bytebank_persistencia_Flutter/screens/dashboard.dart';
 import 'package:flutter/material.dart';
 
-void main() => runApp(BytebankApp());
+import 'database/app_database.dart';
+import 'models/contact.dart';
+
+//void main() => runApp(BytebankApp());
+void main() {
+  runApp(BytebankApp());
+  save(Contact(0, 'alex', 1000)).then((id) {
+    findAll().then((contacts) => debugPrint(contacts.toString()));
+  });
+}
 
 class BytebankApp extends StatelessWidget {
   @override
