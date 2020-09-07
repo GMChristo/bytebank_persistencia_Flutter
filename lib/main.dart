@@ -4,13 +4,11 @@ import 'package:flutter/material.dart';
 import 'database/app_database.dart';
 import 'models/contact.dart';
 
-//void main() => runApp(BytebankApp());
-void main() {
-  runApp(BytebankApp());
-  save(Contact(0, 'alex', 1000)).then((id) {
-    findAll().then((contacts) => debugPrint(contacts.toString()));
-  });
-}
+void main() => runApp(BytebankApp());
+// void main() {
+//   runApp(BytebankApp());
+//   save(Contact(0, 'EU', 5000));
+// }
 
 class BytebankApp extends StatelessWidget {
   @override
